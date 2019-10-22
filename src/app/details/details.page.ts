@@ -13,7 +13,7 @@ import { Subscription } from 'rxjs';
 })
 export class DetailsPage implements OnInit {
   private productId: string = null;
-  public product: Product = {};
+  public product: Product;
   private loading: any;
   private productSubscription: Subscription;
 
@@ -26,7 +26,7 @@ export class DetailsPage implements OnInit {
     private toastCtrl: ToastController
   ) {
     this.productId = this.activatedRoute.snapshot.params['id'];
-
+    this.product = new Product();
     if (this.productId) this.loadProduct();
   }
 
