@@ -4,6 +4,7 @@ export class Product {
     description?: string;
     picture: string;
     price: string;
+    amount: string;
     createdAt?: number;
     userId?: string;
 } 

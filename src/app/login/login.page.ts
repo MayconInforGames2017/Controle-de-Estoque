@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-//import { Keyboard } from '@ionic-native/keyboard/ngx';
+import { Keyboard } from '@ionic-native/keyboard/ngx';
 import { User } from '../interfaces/user';
 import { LoadingController, ToastController } from '@ionic/angular';
 import { AuthService } from '../services/auth.service';
@@ -16,7 +16,7 @@ export class LoginPage implements OnInit {
   private loading: any;
 
   constructor(
-    // public keyboard: Keyboard,
+    public keyboard: Keyboard,
     private loadingCtrl: LoadingController,
     private toastCtrl: ToastController,
     private authService: AuthService

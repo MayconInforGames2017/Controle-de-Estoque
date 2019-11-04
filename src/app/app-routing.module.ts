@@ -8,7 +8,7 @@ const routes: Routes = [
   { path: 'home', loadChildren: () => import('./home/home.module').then(m => m.HomePageModule), canActivate: [AuthGuard] },
   { path: 'login', loadChildren: './login/login.module#LoginPageModule', canActivate: [LoginGuard] },
   { path: 'details', loadChildren: './details/details.module#DetailsPageModule', canActivate: [AuthGuard] },
-  { path: 'details/id', loadChildren: './details/details.module#DetailsPageModule', canActivate: [AuthGuard] },
+  { path: 'details/:id', loadChildren: './details/details.module#DetailsPageModule', canActivate: [AuthGuard] },
 ];
 
 @NgModule({
