@@ -1,5 +1,5 @@
 <ion-content>
-  <div class="container top">
+  <div class="container top" [hidden]="keyboard.isVisible">
     <img src="/assets/imagens/logo.png">
   </div>
 
@@ -48,7 +48,7 @@
   <div class="ocean">
     <div class="waves"></div>
 
-    <div class="container bottom ion-text-center"></div>
+    <div class="container bottom ion-text-center" [hidden]="keyboard.isVisible"></div>
     <span>O aplicativo que foi feito para o gerenciamento de produtos com o controle de estoque!</span>
   </div>
 </ion-content>
